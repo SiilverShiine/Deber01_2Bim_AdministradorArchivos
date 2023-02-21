@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
@@ -22,7 +23,7 @@ class RecyclerViewArchivosGrid : AppCompatActivity() {
         inicializarRecyclerView(listarArchivos, recyclerView)
 
         val botonVista = findViewById<ImageButton>(R.id.btn_change_view)
-        botonVista.setImageResource(R.drawable.tabla_layout)
+        botonVista.foreground = ContextCompat.getDrawable(this, R.drawable.list_layout)
         botonVista.setOnClickListener{
             irActividad(RecyclerViewArchivosList::class.java)
         }
