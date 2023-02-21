@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecyclerViewArchivos">
+    android:background="@color/black"
+    tools:context=".RecyclerViewArchivosList">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_archivos"
-        android:layout_width="373dp"
-        android:layout_height="598dp"
+        android:layout_width="361dp"
+        android:layout_height="595dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.407" />
 
     <TextView
         android:id="@+id/tv_dir"
@@ -22,9 +24,66 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="Almacenamiento interno compartido >"
+        android:textColor="@color/gray"
         app:layout_constraintBottom_toTopOf="@+id/rv_archivos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="390dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bar" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="394dp"
+        android:layout_height="67dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/storage" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        app:srcCompat="@drawable/cleaner_bubble" />
+
+    <ImageButton
+        android:id="@+id/btn_change_view"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="16dp"
+        android:foreground="@drawable/tabla_layout"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dir"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/tv_dir"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tabla_layout" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="19dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_change_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_change_view"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/options" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

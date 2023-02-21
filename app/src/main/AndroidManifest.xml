@@ -20,14 +20,30 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RecyclerViewArchivos"
+            android:name=".RecyclerViewArchivosList"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecyclerViewArchivosGrid"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecyclerViewArchivosAdapterList"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RecyclerViewArchivosAdapter"
+            android:name=".RecyclerViewArchivosAdapterGrid"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

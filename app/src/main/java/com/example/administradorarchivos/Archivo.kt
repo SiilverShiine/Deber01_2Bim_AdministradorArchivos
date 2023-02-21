@@ -1,31 +1,32 @@
 package com.example.administradorarchivos
 
-import android.graphics.drawable.Drawable
 import android.os.Parcel
-import android.os.ParcelFileDescriptor
 import android.os.Parcelable
-import java.io.FileInputStream
+import java.util.Calendar
 import java.util.Date
 
 class Archivo(
     var dir: String?,
-    var icono: Int?,
+    var icono: Int,
     var nombre: String?,
-    var cantidadElementos: Int?,
-    var fechaCreación: Date?
+    var cantidadElementos: Int,
+    var fechaCreacion: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readInt(),
         parcel.readString(),
-        parcel.readValue(Int::class.java.classLoader) as? Int,
-        Date(parcel.readLong())
+        parcel.readInt(),
+        parcel.readString()
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(dir)
+        parcel.writeValue(icono)
         parcel.writeString(nombre)
         parcel.writeValue(cantidadElementos)
+        parcel.writeString(fechaCreacion)
     }
 
     override fun describeContents(): Int {
