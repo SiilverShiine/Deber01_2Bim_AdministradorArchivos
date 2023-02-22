@@ -2,8 +2,6 @@ package com.example.administradorarchivos
 
 import android.os.Parcel
 import android.os.Parcelable
-import java.util.Calendar
-import java.util.Date
 
 class Archivo(
     var dir: String?,
